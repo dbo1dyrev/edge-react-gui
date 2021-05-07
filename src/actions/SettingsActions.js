@@ -140,16 +140,6 @@ export const setDefaultFeeSetting = (currencyCode: string, defaultFee: DefaultFe
     .catch(showError)
 }
 
-export const removeDefaultFeeSetting = (currencyCode: string) => (dispatch: Dispatch, getState: GetState) => {
-  // Thunk
-  const state = getState()
-  const { account } = state.core
-
-  return ACCOUNT_SETTINGS.removeDefaultFeeSetting(account, currencyCode)
-    .then(() => dispatch(SETTINGS_ACTIONS.removeDefaultFee(currencyCode)))
-    .catch(showError)
-}
-
 // touch id interaction
 export const updateTouchIdEnabled = (arg: boolean, account: EdgeAccount) => async (dispatch: Dispatch, getState: GetState) => {
   // dispatch the update for the new state for

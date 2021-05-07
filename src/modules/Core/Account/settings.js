@@ -19,9 +19,9 @@ export const PASSWORD_RECOVERY_REMINDERS_SHOWN = {
 }
 type CurrencyDefault = {
   [currency: string]: {
+    denominations?: string,
     denomination?: string,
-    denomination?: string,
-    defaultFee?: FeeOption
+    defaultFee?: DefaultFeeOption
   }
 }
 const currencyDefaults: CurrencyDefault = {
@@ -685,14 +685,6 @@ export const setDenominationKeyRequest = (account: EdgeAccount, currencyCode: st
 export const saveDefaultFeeSetting = (account: EdgeAccount, currencyCode: string, defaultFee: DefaultFeeOption, customFee?: JsonObject) =>
   getSyncedSettings(account).then(settings => {
     const updatedSettings = updateCurrencySettings(settings, currencyCode, { defaultFee, customFee })
-    return setSyncedSettings(account, updatedSettings)
-  })
-
-// Remove default fee setting from disk
-export const removeDefaultFeeSetting = (account: EdgeAccount, currencyCode: string) =>
-  getSyncedSettings(account).then(settings => {
-    const defaultFee = 'none'
-    const updatedSettings = updateCurrencySettings(settings, currencyCode, { defaultFee })
     return setSyncedSettings(account, updatedSettings)
   })
 
