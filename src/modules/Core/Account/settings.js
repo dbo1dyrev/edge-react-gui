@@ -212,6 +212,9 @@ export const SYNCED_ACCOUNT_DEFAULTS = {
   RIF: {
     denomination: '1000000000000000000'
   },
+  FUSDT: {
+    denomination: '1000000'
+  },
   CREP: {
     denomination: '100000000'
   },
@@ -527,6 +530,8 @@ export const SYNCED_ACCOUNT_TYPES = {
   AMPL: 'object',
   OCEAN: 'object',
   UNI: 'object',
+  FTM: 'object',
+  FUSDT: 'object',
   customTokens: 'object', // arrays return 'object' to typeof
   mostRecentWallets: 'object',
   passwordRecoveryRemindersShown: 'object',
