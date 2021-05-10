@@ -8,7 +8,7 @@ import ShallowRenderer from 'react-test-renderer/shallow'
 import { TransactionDetailsComponent } from '../components/scenes/TransactionDetailsScene.js'
 import { getTheme } from '../components/services/ThemeContext.js'
 import { type GuiWallet } from '../types/types.js'
-
+jest.useFakeTimers()
 const typeHack: any = {
   allDenominations: {
     BTC: {

@@ -8,4 +8,4 @@ install:
 script:
   - yarn lint
   - yarn flow
-  - yarn cover
+  - npm run test -- --runInBand --detectOpenHandles --coverage

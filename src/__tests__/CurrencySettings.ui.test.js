@@ -6,7 +6,7 @@ import ShallowRenderer from 'react-test-renderer/shallow'
 
 import { CurrencySettingsComponent } from '../components/scenes/CurrencySettingsScene.js'
 import { edgeDark } from '../theme/variables/edgeDark.js'
-
+jest.useFakeTimers()
 const typeHack: any = {}
 
 describe('CurrencySettings', () => {

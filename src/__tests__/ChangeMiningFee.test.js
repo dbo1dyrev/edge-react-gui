@@ -5,7 +5,7 @@ import * as React from 'react'
 import ShallowRenderer from 'react-test-renderer/shallow'
 
 import { ChangeMiningFee } from '../components/scenes/ChangeMiningFeeScene.js'
-
+jest.useFakeTimers()
 describe('Change Mining Fees', () => {
   const onSubmit = jest.fn()
   const wallet: Object = {

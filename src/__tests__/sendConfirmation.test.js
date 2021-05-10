@@ -5,7 +5,7 @@ import * as React from 'react'
 import ShallowRenderer from 'react-test-renderer/shallow'
 
 import { SendConfirmation } from '../components/scenes/SendConfirmationScene.js'
-
+jest.useFakeTimers()
 describe('SendConfirmation', () => {
   it('should render with standard props', () => {
     const renderer = new ShallowRenderer()
